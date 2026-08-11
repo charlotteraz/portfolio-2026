@@ -3,13 +3,22 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Design tokens synced from Figma (UX Portfolio file, variables: Label/Text/Link) */
+  --color-label: #1e1e1e;
+  --color-body: #333333;
+  --color-link: #c55d5d;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-label: var(--color-label);
+  --color-body: var(--color-body);
+  --color-link: var(--color-link);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-sofia: var(--font-sofia-pro);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +26,10 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
