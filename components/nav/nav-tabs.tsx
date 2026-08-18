@@ -49,7 +49,7 @@ export function NavTabs() {
   const [hoveredHref, setHoveredHref] = useState<string | null>(null);
 
   return (
-    <div className="fixed left-0 top-[148px] z-10 flex flex-col items-start gap-5">
+    <div className="hidden sm:fixed sm:left-0 sm:top-[148px] sm:z-10 sm:flex sm:flex-col sm:items-start sm:gap-5">
       {TABS.map((tab) => {
         const isActive = pathname === tab.href;
         const expanded = isActive || hoveredHref === tab.href;

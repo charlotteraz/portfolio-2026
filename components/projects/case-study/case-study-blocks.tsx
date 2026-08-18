@@ -236,6 +236,31 @@ export function CaseStudyBlocks({ blocks }: { blocks: ContentBlock[] }) {
                 />
               </div>
             );
+          case "image-row":
+            return (
+              <div
+                key={index}
+                className="mx-auto flex w-full flex-col gap-4 sm:flex-row"
+                style={{ maxWidth: block.images.length > 1 ? 560 : 270 }}
+              >
+                {block.images.map((image, i) => (
+                  <div key={i} className="flex-1">
+                    {/* These screenshots already have transparent, device-rounded
+                        corners baked in — a box radius/shadow would clip them to a
+                        mismatched rectangle, so use a silhouette-following drop-shadow
+                        instead of a box-shadow. */}
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      width={image.width}
+                      height={image.height}
+                      sizes="(min-width: 560px) 270px, 100vw"
+                      className="h-auto w-full drop-shadow-[0px_8px_30px_rgba(0,0,0,0.2)]"
+                    />
+                  </div>
+                ))}
+              </div>
+            );
           case "embed":
             return (
               <div

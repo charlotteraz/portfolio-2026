@@ -7,10 +7,13 @@ import { DfhVisual } from "./dfh/dfh-visual";
 import { DfhHeroVisual } from "./dfh/dfh-hero-visual";
 import { AdvancedRoutingVisual } from "./advanced-routing/advanced-routing-visual";
 import { AdvancedRoutingHeroVisual } from "./advanced-routing/advanced-routing-hero-visual";
+import { RollKeeperVisual } from "./rollkeeper/rollkeeper-visual";
+import { RollKeeperHeroVisual } from "./rollkeeper/rollkeeper-hero-visual";
 import type { ContentBlock } from "./case-study/case-study-content";
 import { BOOKTREE_CONTENT } from "./booktree/booktree-content";
 import { DFH_CONTENT } from "./dfh/dfh-content";
 import { ADVANCED_ROUTING_CONTENT } from "./advanced-routing/advanced-routing-content";
+import { ROLLKEEPER_CONTENT } from "./rollkeeper/rollkeeper-content";
 
 export type ProjectTagData = {
   label: string;
@@ -35,6 +38,16 @@ export type Project = {
 };
 
 export const PROJECTS: Project[] = [
+  {
+    slug: "rollkeeper",
+    title: "RollKeeper",
+    description:
+      "A companion app for shooting film — track which cameras are loaded, what's on each roll, and where it is in its journey from shot to scanned.",
+    tags: [{ label: "Side project" }, { label: "2026" }],
+    Visual: RollKeeperVisual,
+    HeroVisual: RollKeeperHeroVisual,
+    content: ROLLKEEPER_CONTENT,
+  },
   {
     slug: "dfh-design-system",
     title: "DFH Design System",

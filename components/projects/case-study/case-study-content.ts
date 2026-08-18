@@ -9,6 +9,10 @@ export type ContentBlock =
     }
   | { type: "list"; ordered?: boolean; label?: string; boldLabels?: boolean; items: string[] }
   | { type: "image"; src: string; alt: string; width: number; height: number }
+  | {
+      type: "image-row";
+      images: { src: string; alt: string; width: number; height: number }[];
+    }
   | { type: "embed"; src: string; title: string; width: number; height: number }
   | { type: "table"; columns: string[]; rows: string[][] }
   | {

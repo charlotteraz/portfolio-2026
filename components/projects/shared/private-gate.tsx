@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent, type ReactNode } from "react";
 
-const ACCESS_CODE = "12345";
+const ACCESS_CODE = "709870";
 
 export function PrivateGate({ active, children }: { active?: boolean; children: ReactNode }) {
   const [unlocked, setUnlocked] = useState(false);
