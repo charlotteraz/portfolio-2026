@@ -102,7 +102,7 @@ export default function Home() {
         {positions && (
           <>
             <NavBadge
-              href="/files/2026.pdf"
+              href="/files/raz_resume_2026.pdf"
               external
               letter="R"
               label="Resume"
