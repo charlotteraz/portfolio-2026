@@ -17,7 +17,7 @@ export function FeaturedProjects() {
           description={project.description}
           tags={project.tags}
           isPrivate={project.private}
-          visual={<project.Visual />}
+          visual={<project.Visual eager={index < 2} />}
         />
       ))}
     </section>

@@ -17,12 +17,13 @@ const slots = [
   { className: "left-[11%] top-[13.5%] h-[86.5%] w-[89%]" },
 ];
 
-export function DfhVisual() {
+export function DfhVisual({ eager }: { eager?: boolean }) {
   return (
     <ProjectCardStack
       layers={layers}
       slots={slots}
       aspectClassName="relative aspect-[626/485] w-full"
+      eager={eager}
     />
   );
 }

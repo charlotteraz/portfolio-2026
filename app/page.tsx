@@ -25,7 +25,11 @@ type Positions = {
 // viable here: the paragraph's line height is well under the badge's
 // height, so it would collide with the line above whenever the target word
 // isn't on the first line.
-function toPlacement(left: number, top: number, containerRect: DOMRect): Placement {
+function toPlacement(
+  left: number,
+  top: number,
+  containerRect: DOMRect,
+): Placement {
   return {
     left,
     top,
@@ -87,7 +91,10 @@ export default function Home() {
   return (
     <div className="flex h-dvh w-full flex-col overflow-hidden bg-white">
       <header className="flex w-full shrink-0 items-center justify-between px-9 py-[18px]">
-        <Link href="/" className="font-sofia text-[20px] font-semibold uppercase text-black">
+        <Link
+          href="/"
+          className="font-sofia text-[20px] font-semibold uppercase text-black"
+        >
           Charlotte Raz
         </Link>
       </header>
@@ -95,7 +102,7 @@ export default function Home() {
         {positions && (
           <>
             <NavBadge
-              href="/files/resume.pdf"
+              href="/files/2026.pdf"
               external
               letter="R"
               label="Resume"
@@ -146,9 +153,9 @@ export default function Home() {
           <p className="max-w-[720px] font-sofia text-[18px] font-light leading-[28px] text-body sm:text-[22px] sm:leading-[32px] lg:text-[24px] lg:leading-[36px]">
             <span ref={charlotteRef}>Charlotte</span> is a{" "}
             <span className="font-medium">UI/UX Engineer</span> who designs and{" "}
-            <span ref={buildsRef}>builds</span> digital products that feel as good as they
-            look — bridging the gap between design thinking and frontend{" "}
-            <span ref={endRef}>code.</span>
+            <span ref={buildsRef}>builds</span> digital products that feel as
+            good as they look — bridging the gap between design thinking and
+            frontend <span ref={endRef}>code.</span>
           </p>
         </div>
       </main>

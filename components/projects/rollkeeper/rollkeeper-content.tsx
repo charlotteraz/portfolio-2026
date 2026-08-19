@@ -1,11 +1,6 @@
 import type { ContentBlock } from "../case-study/case-study-content";
 
 export const ROLLKEEPER_CONTENT: ContentBlock[] = [
-  {
-    type: "paragraph",
-    text: "Never forget what's in the camera.",
-  },
-
   { type: "heading", text: "At a Glance" },
   {
     type: "list",

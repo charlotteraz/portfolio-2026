@@ -29,7 +29,7 @@ export type Project = {
   description: ReactNode;
   tags: ProjectTagData[];
   // Shown on the /work list card.
-  Visual: ComponentType;
+  Visual: ComponentType<{ eager?: boolean }>;
   // Shown at the top of the case study page; falls back to Visual when unset.
   HeroVisual?: ComponentType;
   // Gates the case study page behind an access-code modal.

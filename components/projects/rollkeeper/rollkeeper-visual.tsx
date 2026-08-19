@@ -23,12 +23,13 @@ const slots = [
   { className: "left-[2%] -top-[2%] h-[87%] w-[86%]" },
 ];
 
-export function RollKeeperVisual() {
+export function RollKeeperVisual({ eager }: { eager?: boolean }) {
   return (
     <ProjectCardStack
       layers={layers}
       slots={slots}
       aspectClassName="relative aspect-[647/482] w-full"
+      eager={eager}
     />
   );
 }

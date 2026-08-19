@@ -47,6 +47,11 @@ export function CaseStudyNav({ entries }: { entries: TocEntry[] }) {
           <a
             key={entry.id}
             href={`#${entry.id}`}
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById(entry.id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+              history.pushState(null, "", `#${entry.id}`);
+            }}
             aria-current={isActive ? "location" : undefined}
             className={`border-l-2 py-1 font-sofia text-[13px] leading-snug transition-colors duration-150 ${
               entry.level === "part" ? "pl-3 font-semibold" : "pl-4 font-normal"

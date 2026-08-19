@@ -28,8 +28,11 @@
   }
 }
 
+/* Not scroll-behavior: smooth — that applies to Next's own route-transition
+   scroll-to-top too, which made page navigation glide up from the bottom on
+   long case studies. TOC links animate their own smooth scroll instead. */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {

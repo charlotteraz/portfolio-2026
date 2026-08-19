@@ -15,10 +15,15 @@ export function ProjectCardStack({
   layers,
   slots,
   aspectClassName,
+  eager,
 }: {
   layers: StackLayer[];
   slots: SlotGeometry[];
   aspectClassName: string;
+  // The front image of a card near the top of /work can end up being the
+  // page's Largest Contentful Paint — set for rows likely above the fold
+  // so Next doesn't lazy-load past their natural paint time.
+  eager?: boolean;
 }) {
   return (
     <div className={`group ${aspectClassName}`}>
@@ -36,7 +41,7 @@ export function ProjectCardStack({
             } ${layer.kind === "color" ? layer.className : ""}`}
           >
             <div
-              className={`h-full w-full ${
+              className={`relative h-full w-full ${
                 isFront ? "transition-transform duration-300 ease-out group-hover:scale-105" : ""
               }`}
             >
@@ -45,6 +50,8 @@ export function ProjectCardStack({
                   src={layer.src}
                   alt={layer.alt}
                   fill
+                  sizes="(min-width: 1024px) 614px, 100vw"
+                  loading={isFront && eager ? "eager" : undefined}
                   className="pointer-events-none object-cover"
                 />
               )}
