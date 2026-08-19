@@ -20,7 +20,7 @@ const TABS = [
     external: false,
   },
   {
-    href: "/files/resume.pdf",
+    href: "/files/raz_resume_2026.pdf",
     letter: "R",
     label: "Resume",
     bgColor: "#2e9f51",

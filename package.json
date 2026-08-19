@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "next build && aws s3 sync ./out s3://charlotteraz.com/ --delete"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.3.1",
