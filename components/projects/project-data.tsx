@@ -56,7 +56,6 @@ export const PROJECTS: Project[] = [
     tags: [{ label: "Dragonfly Health" }, { label: "2026" }, SHIPPED_TAG],
     Visual: DfhVisual,
     HeroVisual: DfhHeroVisual,
-    private: true,
     content: DFH_CONTENT,
   },
   {
