@@ -152,10 +152,13 @@ export default function Home() {
         <div className="flex h-full items-center px-6 sm:px-16 lg:px-[14%]">
           <p className="max-w-[720px] font-sofia text-[18px] font-light leading-[28px] text-body sm:text-[22px] sm:leading-[32px] lg:text-[24px] lg:leading-[36px]">
             <span ref={charlotteRef}>Charlotte</span> is a{" "}
-            <span className="font-medium">UI/UX Engineer</span> who designs and{" "}
-            <span ref={buildsRef}>builds</span> digital products that feel as
-            good as they look — bridging the gap between design thinking and
-            frontend <span ref={endRef}>code.</span>
+            <span className="font-medium">UI/UX Engineer</span> with 3+ years of
+            <span ref={buildsRef}> experience </span> designing and building
+            digital products. She designed components for her team&rsquo;s
+            design system and leads the frontend package that ships it — using
+            AI to move faster from design to production code. Previously, she
+            replaced a costly third-party vendor with a solution she built{" "}
+            <span ref={endRef}>end-to-end.</span>
           </p>
         </div>
       </main>

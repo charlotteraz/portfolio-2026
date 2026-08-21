@@ -62,7 +62,7 @@ export const PROJECTS: Project[] = [
     slug: "advanced-routing",
     title: "Advanced Routing",
     description:
-      "Modernizing Route Optimization in a Healthcare Logistics Platform",
+      "Led UX for a legacy-to-API routing migration, cutting tool-switching and retiring a costly license.",
     tags: [{ label: "Dragonfly Health" }, { label: "2025" }, SHIPPED_TAG],
     Visual: AdvancedRoutingVisual,
     HeroVisual: AdvancedRoutingHeroVisual,
@@ -72,7 +72,8 @@ export const PROJECTS: Project[] = [
   {
     slug: "booktree",
     title: "BookTree",
-    description: "An End-to-end Mobile App for Book Lovers",
+    description:
+      "An end-to-end mobile app for book lovers featuring a read-together experience.",
     tags: [{ label: "Side project" }, { label: "2024" }],
     Visual: BookTreeVisual,
     HeroVisual: BookTreeHeroVisual,
